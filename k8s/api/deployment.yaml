@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: hono-api-container
-          image: malathals14/hono-api-image:v1
+          image: malathals14/hono-api-image:v1.0.1
           imagePullPolicy: Always
           ports:
             - name: http
