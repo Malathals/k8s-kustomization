@@ -8,9 +8,9 @@ secretGenerator:
     literals:
       - DATABASE_URL=postgres://postgres:postgres@postgres-service:5432/postgres
 
-
 generatorOptions:
   disableNameSuffixHash: true
 
 resources:
   - ../../base
+  - configmap.yaml
