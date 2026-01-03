@@ -7,10 +7,17 @@ secretGenerator:
   - name: hono-api-secret
     literals:
       - DATABASE_URL=postgres://postgres:postgres@postgres-service:5432/postgres
+  - name: postgres-credentials
+    literals:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
 
 generatorOptions:
   disableNameSuffixHash: true
 
 resources:
   - ../../base
+  - ../../namespaces/hono-system.yaml
+  - ../../namespaces/dev.yaml
   - configmap.yaml
