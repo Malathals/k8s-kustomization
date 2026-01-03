@@ -3,14 +3,14 @@ kind: Kustomization
 
 namespace: dev
 
+secretGenerator:
+  - name: hono-api-secret
+    literals:
+      - DATABASE_URL=postgres://postgres:postgres@postgres-service:5432/postgres
+
+
+generatorOptions:
+  disableNameSuffixHash: true
+
 resources:
   - ../../base
-
-patches:
-  - patch: |-
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: hono-api-deployment
-      spec:
-        replicas: 5
