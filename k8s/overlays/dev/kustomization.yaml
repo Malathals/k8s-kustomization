@@ -18,6 +18,4 @@ generatorOptions:
 
 resources:
   - ../../base
-  - ../../namespaces/hono-system-ns.yaml
-  - ../../namespaces/dev-ns.yaml
   - configmap.yaml
