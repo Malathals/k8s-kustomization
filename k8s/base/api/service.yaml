@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hono-api-service
+  namespace: hono-system
+  labels:
+    app: hono-api-service
+spec:
+  selector:
+    app: hono-api-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
